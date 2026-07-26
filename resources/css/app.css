@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@font-face {
+    font-family: "Pelak";
+    src: url("../fonts/Pelak-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+
+body{
+    font-family: "Pelak", sans-serif;
+}
+

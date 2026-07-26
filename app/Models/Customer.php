@@ -6,6 +6,7 @@ use App\Models\Scopes\OwnedByUserScope;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Facades\Auth;
 
 class Customer extends Model
 {
@@ -16,7 +17,7 @@ class Customer extends Model
         static::addGlobalScope(new OwnedByUserScope);
 
         static::creating(function ($customer) {
-            $customer->user_id ??= auth()->id();
+            $customer->user_id ??= Auth::id();
         });
     }
 

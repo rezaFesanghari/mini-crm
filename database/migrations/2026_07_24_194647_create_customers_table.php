@@ -13,14 +13,14 @@ return new class extends Migration
     {
         Schema::create('customers', function (Blueprint $table) {
              $table->id();
-    $table->foreignId('user_id')->constrained()->cascadeOnDelete();
-    $table->foreignId('company_id')->nullable()->constrained()->nullOnDelete();
-    $table->string('name');
-    $table->string('email')->nullable();
-    $table->string('phone')->nullable();
-    $table->string('address')->nullable();
-    $table->enum('status', ['lead', 'customer'])->default('lead');
-    $table->timestamps();
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('company_id')->nullable()->constrained()->nullOnDelete();
+            $table->string('name');
+            $table->string('email')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('address')->nullable();
+            $table->enum('status', ['lead', 'customer'])->default('lead');
+            $table->timestamps();
         });
     }
 
