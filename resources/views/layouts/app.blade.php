@@ -76,7 +76,7 @@
                 <svg class="w-[17px] h-[17px] opacity-85 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M2 21v-2a4 4 0 014-4h6a4 4 0 014 4v2M17 3.5a4 4 0 010 7"/></svg>
                 مشتری‌ها
             </a>
-            <a class="flex items-center gap-2.5 px-3 py-2.5 rounded-[9px] text-[#B7BECF] text-sm font-medium cursor-pointer transition-colors hover:bg-white/5 hover:text-white">
+            <a href="{{ route('companies.index') }}" wire:navigate class=" {{ request()->routeIs('companies.*') ? 'active' : '' }} flex items-center gap-2.5 px-3 py-2.5 rounded-[9px] text-[#B7BECF] text-sm font-medium cursor-pointer transition-colors hover:bg-white/5 hover:text-white">
                 <svg class="w-[17px] h-[17px] opacity-85 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
                 شرکت‌ها
             </a>
