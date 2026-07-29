@@ -68,23 +68,32 @@
 
         <!-- Navigation Links -->
         <nav class="space-y-1">
-            <a class="flex items-center gap-2.5 px-3 py-2.5 rounded-[9px] text-[#B7BECF] text-sm font-medium cursor-pointer transition-colors hover:bg-white/5 hover:text-white">
+            <a href="{{ route('dashboard') }}" wire:navigate
+               class="flex items-center gap-2.5 px-3 py-2.5 rounded-[9px] text-sm font-medium cursor-pointer transition-colors {{ request()->routeIs('dashboard') ? 'bg-[#1F9D7C]/[0.14] text-white border-r-2 border-[#1F9D7C]' : 'text-[#B7BECF] hover:bg-white/5 hover:text-white' }}">
                 <svg class="w-[17px] h-[17px] opacity-85 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 12l9-9 9 9M5 10v10a1 1 0 001 1h4v-6h4v6h4a1 1 0 001-1V10"/></svg>
                 داشبورد
             </a>
-            <a class="flex items-center gap-2.5 px-3 py-2.5 rounded-[9px] text-sm font-medium cursor-pointer bg-[#1F9D7C]/[0.14] text-white border-r-2 border-[#1F9D7C]">
+
+            <a href="{{ route('customers.index') }}" wire:navigate
+               class="flex items-center gap-2.5 px-3 py-2.5 rounded-[9px] text-sm font-medium cursor-pointer transition-colors {{ request()->routeIs('customers.*') ? 'bg-[#1F9D7C]/[0.14] text-white border-r-2 border-[#1F9D7C]' : 'text-[#B7BECF] hover:bg-white/5 hover:text-white' }}">
                 <svg class="w-[17px] h-[17px] opacity-85 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M2 21v-2a4 4 0 014-4h6a4 4 0 014 4v2M17 3.5a4 4 0 010 7"/></svg>
                 مشتری‌ها
             </a>
-            <a href="{{ route('companies.index') }}" wire:navigate class=" {{ request()->routeIs('companies.*') ? 'active' : '' }} flex items-center gap-2.5 px-3 py-2.5 rounded-[9px] text-[#B7BECF] text-sm font-medium cursor-pointer transition-colors hover:bg-white/5 hover:text-white">
+
+            <a href="{{ route('companies.index') }}" wire:navigate
+               class="flex items-center gap-2.5 px-3 py-2.5 rounded-[9px] text-sm font-medium cursor-pointer transition-colors {{ request()->routeIs('companies.*') ? 'bg-[#1F9D7C]/[0.14] text-white border-r-2 border-[#1F9D7C]' : 'text-[#B7BECF] hover:bg-white/5 hover:text-white' }}">
                 <svg class="w-[17px] h-[17px] opacity-85 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
                 شرکت‌ها
             </a>
-            <a class="flex items-center gap-2.5 px-3 py-2.5 rounded-[9px] text-[#B7BECF] text-sm font-medium cursor-pointer transition-colors hover:bg-white/5 hover:text-white">
+
+            <a href="{{ route('deals.index') }}" wire:navigate
+               class="flex items-center gap-2.5 px-3 py-2.5 rounded-[9px] text-sm font-medium cursor-pointer transition-colors {{ request()->routeIs('deals.*') ? 'bg-[#1F9D7C]/[0.14] text-white border-r-2 border-[#1F9D7C]' : 'text-[#B7BECF] hover:bg-white/5 hover:text-white' }}">
                 <svg class="w-[17px] h-[17px] opacity-85 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
                 فرصت‌های فروش
             </a>
-            <a class="flex items-center gap-2.5 px-3 py-2.5 rounded-[9px] text-[#B7BECF] text-sm font-medium cursor-pointer transition-colors hover:bg-white/5 hover:text-white">
+
+            <a href="{{ route('tasks.index') }}" wire:navigate
+               class="flex items-center gap-2.5 px-3 py-2.5 rounded-[9px] text-sm font-medium cursor-pointer transition-colors {{ request()->routeIs('tasks.*') ? 'bg-[#1F9D7C]/[0.14] text-white border-r-2 border-[#1F9D7C]' : 'text-[#B7BECF] hover:bg-white/5 hover:text-white' }}">
                 <svg class="w-[17px] h-[17px] opacity-85 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
                 تسک‌ها
             </a>
@@ -92,10 +101,10 @@
 
         <!-- User profile section -->
         <div class="mt-auto pt-4 border-t border-white/10 flex items-center gap-2.5">
-            <div class="w-8 h-8 rounded-full bg-[#3A4363] flex items-center justify-center text-xs font-bold shrink-0">آ.ر</div>
+            <div class="w-8 h-8 rounded-full bg-[#3A4363] flex items-center justify-center text-xs font-bold shrink-0">ر.ف</div>
             <div class="min-w-0">
-                <div class="text-[13px] font-semibold truncate">آرش رضایی</div>
-                <div class="text-[11px] text-[#8A93A8] truncate">مدیر فروش</div>
+                <div class="text-[13px] font-semibold truncate">رضا فسنقری</div>
+                <div class="text-[11px] text-[#8A93A8] truncate">توسعه دهنده</div>
             </div>
         </div>
     </aside>

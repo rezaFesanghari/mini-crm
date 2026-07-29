@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Note extends Model
 {
-    // app/Models/Note.php و app/Models/Task.php — هر دو همین الگو
+    protected $guarded = ['id'];
     protected static function booted(): void
     {
         static::addGlobalScope(new \App\Models\Scopes\OwnedByUserScope);
