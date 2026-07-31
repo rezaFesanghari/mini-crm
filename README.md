@@ -33,11 +33,11 @@ This project was built as a portfolio project to demonstrate modern Laravel deve
 
 | Dashboard | Customers |
 |-----------|-----------|
-| ![Dashboard](screenshots/Screenshot 2026-07-31 101948.png) | ![Customers](screenshots/Screenshot 2026-07-31 102011.png) |
+| ![Dashboard](screenshots/dashboard.png) | ![Customers](screenshots/customers.png) |
 
 | index                                   | Sales Pipeline |
 |-----------------------------------------|----------------|
-| ![Companies](screenshots/Screenshot 2026-07-31 102031.png) | ![Sales Pipeline](screenshots/Screenshot 2026-07-31 101847.png) |
+| ![Companies](screenshots/index.png) | ![Sales Pipeline](screenshots/sales-pipeline.png) |
 
 
 # 🌟 Features
